@@ -1,0 +1,23 @@
+[project]
+name = "my-flask-worker"
+version = "0.1.0"
+description = "Flask on Cloudflare Workers"
+requires-python = ">=3.13"
+# The Cloudflare Worker (src/worker.py) is pure-Python/stdlib — no runtime deps.
+# Flask is only needed by the full OS-level lab variant (src/app.py).
+dependencies = []
+
+[project.optional-dependencies]
+fulllab = ["flask", "flask-sock"]
+
+[dependency-groups]
+dev = [
+    "workers-py",
+    "workers-runtime-sdk",
+    "pytest"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+

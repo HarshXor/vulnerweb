@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+
+# pywrangler / wrangler build artifacts
+.wrangler/
+build/
+python_modules/
+pylock.toml
+uv.lock
+
+# lab runtime data
+/tmp/shopnow*.sqlite3

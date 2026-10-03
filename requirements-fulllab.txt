@@ -1,0 +1,3 @@
+flask>=3.0
+# optional: enables the real /ws WebSocket endpoint (falls back without it)
+flask-sock>=0.7
